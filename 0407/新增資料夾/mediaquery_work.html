@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #nav {
+            width: 300px;
+            height: 100vh;
+            background-color: black;
+            float: left;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            background-image: url(https://storage.inewsdb.com/9e4ea5208a4f3473354d8eebbcf7eb9c.jpeg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-bottom: 20px;
+
+        }
+
+
+        .btn-group {
+            width: 200px;
+            height: 260px;
+            /* background-color: green; */
+            margin: auto;
+        }
+
+        .btn:nth-child(2) {
+            margin: 10px 0px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 80px;
+            background-color: lavender;
+            text-align: center;
+            line-height: 80px;
+
+        }
+        .btn a
+        {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            height: 100%;
+            /* background-color: violet; */
+            margin: auto;
+        }
+
+        #nav .container {
+            padding-top: 50px;
+        }
+
+        #main .container {
+            width: 880px;
+            padding-top: 15%;
+            position: relative;
+        }
+
+        #main {
+            width: calc(100% - 300px);
+            height: 100vh;
+            background-color: blanchedalmond;
+            float: left;
+
+        }
+
+        .image-group {
+            width: 100%;
+            height: 500px;
+            margin: auto;
+
+            position: absolute;
+            top: calc(50% - 250px)
+        }
+
+        .image-group .image {
+            height: 100%;
+            width: 33%;
+
+            float: left;
+            line-height: 500px;
+            text-align: center;
+            font-size: 72px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image-group .image:hover {
+            opacity: 0.2;
+            transition: 2s;
+        }
+
+        .image:nth-child(1) {
+            background-image: url(https://upload.wikimedia.org/wikipedia/zh/8/82/KR-01-logo.png);
+
+        }
+
+        .image:nth-child(2) {
+            margin: 0px 0.5%;
+            background-image: url(https://i.imgur.com/sqjjJbFh.jpg);
+        }
+
+        .image:nth-child(3) {
+            background-image: url(https://www.fun01.cc/ups/223/post/600x314/5d5a04d5a6376982.jpg);
+
+        }
+
+        @media(max-width: 1280px) {
+
+            #main .container {
+                width: 750px;
+            }
+
+            .image:nth-child(1) {
+                width: 100%;
+                height: 50%;
+                line-height: 250px;
+
+            }
+
+            .image:nth-child(2),
+            .image:nth-child(3) {
+                width: calc(50% - 5px);
+                height: calc(50% - 10px);
+                line-height: 250px;
+                margin: 0;
+                margin-top: 10px;
+            }
+
+            .image:nth-child(2) {
+                margin-right: 10px;
+            }
+        }
+
+        @media(max-width: 1155px) {
+            #nav {
+                width: 100%;
+                height: 120px;
+            }
+
+            #main {
+                width: 100%;
+                background-color: red;
+                min-height: calc(100vh - 120px);
+                padding-top: 120px;
+                height: unset;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            #nav .container {
+                padding-top: 10px;
+            }
+
+            #main .container {
+                width: 90%;
+                padding-top: 0%;
+            }
+
+            .logo {
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin: 0px;
+
+            }
+
+            .btn-group {
+                width: unset;
+                height: 100px;
+                float: right;
+                padding-top: 10px;
+            }
+
+            .btn {
+                float: left;
+                width: 100px;
+
+            }
+
+            .btn:nth-child(2) {
+                margin: 0px 5px;
+            }
+
+            .image-group {
+                height: 800px;
+                position: static;
+
+            }
+
+            .image {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 576px) {
+            #nav {
+                height: 80px;
+            }
+
+            #nav .container {
+                position: relative;
+            }
+
+            .logo {
+                float: left;
+                width: 60px;
+                height: 60px;
+                margin: 0px;
+                position: absolute;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+            }
+
+            .menu-btn {
+                width: 50px;
+                height: 50px;
+                background-color: yellow;
+                position: absolute;
+                top: calc(50% - 25px);
+                left: 0;
+            }
+
+            .btn-group {
+                float: right;
+                width: unset;
+                /* height: 100px; */
+                padding: 0px;
+                position: absolute;
+                top: calc(50% + 25px);
+                left: 0;
+                z-index: 1;
+                display: none;
+            }
+
+            .btn-group .btn {
+                float: unset;
+                width: 100px;
+                margin: 0px;
+
+            }
+
+            #main {
+                padding-top: 0;
+            }
+
+            #main .container {
+                width: 100%;
+                padding: 0px;
+            }
+
+            .image-group {
+                height: unset;
+                /* 為了讓大小根據子層調整 */
+                display: inline-block;
+            }
+
+            #main .image-group .image {
+                height: 300px;
+                width: 100%;
+            }
+
+            .image:nth-child(2),
+            .image:nth-child(3) {
+                margin: 0;
+            }
+
+            .menu-btn:hover
+            {
+                display: none;
+            }
+
+            .btn-group:hover,
+            .menu-btn:hover+.btn-group {
+                display: block;
+            }
+
+
+
+
+        }
+
+        
+    </style>
+
+
+</head>
+
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="https://stickershop.line-scdn.net/stickershop/v1/product/3008928/LINEStorePC/main.png;compress=true"
+                    alt="" class="center"> -->
+            </div>
+            <div class="menu-btn"></div>
+            <div class="btn-group">
+                <div class="btn">
+                    <a href="https://www.google.com.tw/">Google</a>
+                </div>
+                <div class="btn">
+                    <a href="https://www.google.com.tw/maps/">GoogleMap</a>
+                </div>
+                <div class="btn">
+                    <a href="https://www.youtube.com/">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="image-group">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

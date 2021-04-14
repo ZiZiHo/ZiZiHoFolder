@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZiZiHo 微軟二切</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        nav {
+            width: 100%;
+            height: 54px;
+        }
+
+        .container {
+            padding: 0px 7.9%;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        span,
+        p,
+        li {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .business-bar,
+        .personal-bar {
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-content: space-between;
+        }
+
+        .logo {
+            width: 137px;
+            height: 54px;
+            padding: 16px 6px 16px 10px;
+            margin-top: 1px;
+        }
+
+        .logo img {
+            height: 23px;
+            width: 108px;
+            margin-top: -3px;
+        }
+
+        .links {
+            height: 100%;
+            line-height: 100%;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            border: 1px;
+            padding: 16px 6px 16px 10px;
+            margin: 1px 9.8px 0.95px 4px;
+        }
+
+        .links a {
+            text-decoration: none;
+
+        }
+
+        .link-text span {
+            font-size: 13px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .service,
+        .service-text,
+        .service-menu-image {
+            height: 100%;
+        }
+
+        .service {
+            /* width: 145px; */
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 16px 16px 16px 15px;
+            border: 1px;
+            margin-top: 1px;
+        }
+
+        .search-text span,
+        .personal-bar span {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        .search {
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 9px 30px 0px;
+            margin: 0px 1px 1px 1px;
+        }
+
+        .search,
+        .search-text,
+        .search-image {
+            height: 100%;
+        }
+
+        .search-image img {
+            height: 16px;
+            width: 16px;
+            margin-left: 2px;
+        }
+
+        .shopping-cart,
+        .shopping-cart-image {
+            height: 100%;
+        }
+
+        .shopping-cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2px;
+            padding-bottom: 8px;
+            margin: 1px 4px 0px 18px;
+        }
+
+        .shopping-cart-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shopping-cart-image img {
+            height: 25px;
+            width: 28px;
+        }
+
+        .sign-in {
+            display: flex;
+            height: 100%;
+            width: 90px;
+        }
+
+        .sign-in {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sign-in-text span {
+            line-height: 100%;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+
+        .mobile-bar,
+        .mobile-bar-other,
+        .mobile-bar-pop {
+            display: none;
+        }
+
+        /*----------------------------------------- nav結束------------------------------------------------------------------ */
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slide-picture-block {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .slide-picture {
+            width: 1600px;
+            height: 600px;
+
+        }
+
+        .slide-picture img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide-picture-text {
+            /* background-color: tomato; */
+            position: absolute;
+            top: 35%;
+            left: 5.67%;
+        }
+
+        .commodity-name h1 {
+            font-size: 34px;
+            line-height: 40px;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: -.01em;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .slide-picture-btn {
+            width: 120px;
+            height: 36px;
+            background-color: black;
+            color: white;
+            padding: 8px 12px 8px 20px;
+            border: 2px;
+        }
+
+        .slide-picture-btn span {
+            font-size: 15px;
+        }
+
+        /* -------------------------------------------- 選擇... bar ------------------------------------------------ */
+        .choice-bar {
+            width: 100%;
+            height: 180px;
+            /* background-color: tomato; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 25px;
+
+        }
+
+        .microsoft365-block {
+            width: 184px;
+            height: 112px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .microsoft365-block img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .microsoft365-block p {
+            width: 125px;
+            height: 40px;
+            margin: 0;
+            margin-left: 22px;
+            margin-right: 21px;
+            margin-top: 2px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        .surface-block,
+        .window10-block {
+            width: 184px;
+            height: 92px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .surface-block img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 4px;
+        }
+
+        .surface-block p {
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        .window10-block img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .window10-block p {
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        /* -------------------------------------------- 商品介紹 bar ------------------------------------------------ */
+        .product-bar {
+            width: 100%;
+            /* height: 410px; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-block {
+            height: 100%;
+            width: 23%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 214px;
+        }
+
+        .product-text {
+            width: 100%;
+            display: flex;
+            justify-items: left;
+            flex-direction: column;
+        }
+
+        .product-text span {
+            /* width: 382px; */
+            font-size: 20px;
+            margin: 0;
+            margin-top: 37px;
+        }
+
+        .product-text-title {
+            font-weight: 600;
+        }
+
+        .product-text,
+        p {
+            margin: 0;
+            /* width: 370px; */
+            font-size: 15px;
+            margin-bottom: 10px;
+            font-weight: 0;
+        }
+
+        .hyperlink,
+        .hyperlink span {
+            color: #005da6;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .arrow {
+            margin-left: -5px;
+        }
+
+        .one-drive-bar {
+            margin-top: 48px;
+        }
+
+        .one-drive-bar h1 {
+            letter-spacing: -.01em;
+            overflow: hidden;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        .one-drive-bar .commodity-description p {
+            line-height: 20px;
+            width: 412px;
+            padding-top: 10px;
+
+        }
+
+        .one-drive-bar .slide-picture-text {
+            padding-top: 20px;
+            padding-left: 5px;
+        }
+
+        .one-drive-bar .slide-picture-btn {
+            width: 123px;
+            height: 39px;
+        }
+
+        .busuness {
+            width: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .busuness-text-bar {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-items: left;
+            flex-direction: column-reverse;
+        }
+
+        .busuness-text-bar span {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 600;
+        }
+
+
+        .busuness .product-text span {
+            font-weight: 600;
+        }
+
+        /*--------------------------------------------------- 社群軟體bar--------------------------------------------------------------- */
+        .social-bar {
+            width: 100%;
+            height: 80px;
+            display: flex;
+
+        }
+
+        .social-bar span {
+            width: 112px;
+            font-size: 15px;
+            height: 28px;
+            line-height: 28px;
+            padding-right: 12px;
+            margin: 0;
+        }
+
+        .social-bar img {
+            width: 28px;
+            height: 28px;
+            margin-right: 13px;
+        }
+
+        .social-bar-text {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            /* align-items: center; */
+        }
+
+        /*------------------------------------------------------------- footer------------------------------------------------------------- */
+        footer {
+            width: 100%;
+            background: #f2f2f2;
+        }
+
+        .footer-block {
+            width: 100%;
+            display: flex;
+            padding-top: 50px;
+
+        }
+
+        .footer-block-card {
+            width: 16.666667%;
+            height: 324px;
+
+        }
+
+        .footer-block-card span {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .footer-block-card ul {
+            padding: 0;
+        }
+
+        .footer-block-card li {
+            list-style-type: none;
+            width: 100%;
+            height: 32px;
+            padding: 8px 0px;
+            font-size: 12px;
+        }
+
+        .footer-information {
+            width: 100%;
+            height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .language {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .language img {
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+        }
+
+        .language span,
+        .footer-information span {
+            font-size: 12px;
+            margin-top: 0;
+        }
+
+        .company-link {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-link span {
+            padding: 0px 24px 4px 0px;
+        }
+
+        .link-underborder:hover {
+            text-decoration: underline;
+        }
+
+        /*-------------------------------------------------------------彈出式視窗------------------------------------------------------------- */
+        .popout-list {
+            width: 1230px;
+            height: 400px;
+            background-color: black;
+            position: absolute;
+            left: 23%;
+            top: 54px;
+            z-index: 2;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            display: none;
+        }
+
+        #menu:checked+.popout-list {
+            display: flex;
+        }
+
+        .list-block {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+
+        .pl-group-list {
+            padding: 12px 0px 12px 24px;
+            font-size: 13px;
+        }
+
+        .popout-list-title {
+            width: 195px;
+            height: 53px;
+            padding: 18px 0px 18px 24px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .popout-list-group {
+            width: 195px;
+            height: 247px;
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        input {
+            display: none;
+        }
+
+        /*-------------------------------------------------------------RWD------------------------------------------------------------- */
+        @media (max-width: 1366px) {
+            .search {
+                width: auto;
+            }
+
+            .search-text {
+                display: none;
+            }
+
+            .shopping-cart {
+                margin-left: 0;
+            }
+
+            .shopping-cart-text {
+                display: none;
+            }
+
+            .sign-in-text {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1020px) {
+            .container {
+                padding: 0px;
+            }
+
+            .product-bar {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 862px) {
+
+            .business-bar,
+            .personal-bar {
+                display: none;
+            }
+
+            .mobile-bar {
+                width: 100%;
+                height: 54px;
+                display: flex;
+                flex-wrap: wrap;
+                /* background-color: blueviolet; */
+
+            }
+
+            .menu-btn-block {
+                width: 50px;
+                height: 100%;
+                float: left;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: chartreuse;
+            }
+
+
+            #menu {
+                width: 48px;
+                height: 48px;
+
+            }
+
+            .menu-btn {
+                font-size: 20px;
+                float: left;
+            }
+
+            
+
+            .mobile-bar-other {
+                height: 100%;
+                width: calc(100% - 50px);
+                float: left;
+                /* background-color: burlywood; */
+                position: relative;
+            }
+
+            .mobile-logo {
+                width: 40%;
+                height: 88%;
+                padding: 12px 4px 12px 0px;
+                margin: 1px;
+                position: absolute;
+                left: calc(50% - 58px);
+                top: calc(50% - 22px);
+                float: left;
+            }
+
+            .mobile-bar-other .search-image {
+                height: 100%;
+                width: 32px;
+                float: left;
+                position: absolute;
+                /* background-color: chocolate; */
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile-bar-other .search-image img {
+                width: 32px;
+                height: 25px;
+
+            }
+
+            .mobile-bar-right-block {
+                width: 48px;
+                height: 100%;
+                float: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile-bar-right-block img {
+                width: 75%;
+                height: 75%;
+            }
+
+            /*--------------------------------------------------------- 手機板 pop--------------------------------------------------------- */
+            .mobile-bar-pop {
+                width: 100%;
+                display: flex;
+                background-color: #f2f2f2;
+                position: absolute;
+                left: 0%;
+                top: 54px;
+                z-index: 3;
+            }
+            .mobile-bar-pop li{
+                width: 464px;
+                height: 49px;
+                font-size: 15px;
+                padding: 14px 24px 15px 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="business-bar ">
+                <div class="logo">
+                    <a href="https://www.microsoft.com/zh-tw/"><img
+                            src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                            alt=""></a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://www.microsoft.com/zh-tw/microsoft-365?rtc=1">
+                        <div class="link-text">
+                            <span>Microsoft 365</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://www.microsoft.com/zh-tw/microsoft-365/microsoft-office?rtc=1">
+                        <div class="link-text">
+                            <span>Office</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://www.microsoft.com/zh-tw/windows/">
+                        <div class="link-text">
+                            <span>Windows</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://www.microsoft.com/zh-tw/surface">
+                        <div class="link-text">
+                            <span>Surface</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://www.xbox.com/zh-TW/">
+                        <div class="link-text">
+                            <span>Xbox</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links link-underborder">
+                    <a href="https://support.microsoft.com/zh-tw">
+                        <div class="link-text">
+                            <span>支援</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="personal-bar">
+                <div class="service link-underborder">
+                    <div class="service-text">
+                        <span>所有Microsoft</span>
+                    </div>
+                    <div class="service-menu-image">
+                        <label for="menu"><img src="./image/下拉式選單.png" /></label>
+                        <input type="checkbox" name="" id="menu">
+
+                        <div class="popout-list">
+                            <span class="list-block">
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">軟體</li>
+                                    <li class="pl-group-list link-underborder">Windows 應用程式</li>
+                                    <li class="pl-group-list link-underborder">OneDrive</li>
+                                    <li class="pl-group-list link-underborder">Outlook</li>
+                                    <li class="pl-group-list link-underborder">Skype</li>
+                                    <li class="pl-group-list link-underborder">OneNote</li>
+                                    <li class="pl-group-list link-underborder">Microsoft Teams</li>
+                                </ul>
+                            </span>
+                            <span class="list-block">
+
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">個人電腦和設備</li>
+                                    <li class="pl-group-list link-underborder">選購Xbox</li>
+                                    <li class="pl-group-list link-underborder">電腦配件</li>
+                                </ul>
+                            </span>
+                            <span class="list-block">
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">娛樂</li>
+                                    <li class="pl-group-list link-underborder">Xbox Game Pass Ultimate</li>
+                                    <li class="pl-group-list link-underborder">Xbox Live Gold</li>
+                                    <li class="pl-group-list link-underborder">Xbox與遊戲</li>
+                                    <li class="pl-group-list link-underborder">電腦遊戲</li>
+                                    <li class="pl-group-list link-underborder">Windows遊戲</li>
+                                </ul>
+                            </span>
+                            <span class="list-block">
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">商務適用</li>
+                                    <li class="pl-group-list link-underborder">Microsoft Azure</li>
+                                    <li class="pl-group-list link-underborder">Microsoft Dynamics 365</li>
+                                    <li class="pl-group-list link-underborder">Microsoft 365</li>
+                                    <li class="pl-group-list link-underborder">Microsoft Industry</li>
+                                    <li class="pl-group-list link-underborder">資料平台</li>
+                                    <li class="pl-group-list link-underborder">Power Platform</li>
+                                    <li class="pl-group-list link-underborder">選購商務版</li>
+                                </ul>
+                            </span>
+                            <span class="list-block">
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">Developer & IT</li>
+                                    <li class="pl-group-list link-underborder">.NET</li>
+                                    <li class="pl-group-list link-underborder">Visual Studio</li>
+                                    <li class="pl-group-list link-underborder">Windows Server</li>
+                                    <li class="pl-group-list link-underborder">開發Windows應用程式</li>
+                                    <li class="pl-group-list link-underborder">文件</li>
+                                    <li class="pl-group-list link-underborder">Power Apps</li>
+                                </ul>
+                            </span>
+                            <span class="list-block">
+                                <ul class="popout-list-group">
+                                    <li class="pl-group-list popout-list-title">其他</li>
+                                    <li class="pl-group-list link-underborder">Microsoft Rewards</li>
+                                    <li class="pl-group-list link-underborder">免費下載與安全性</li>
+                                    <li class="pl-group-list link-underborder">教育</li>
+                                    <li class="pl-group-list link-underborder">禮品卡</li>
+                                    <li class="pl-group-list link-underborder">Licensing</li>
+                                </ul>
+                            </span>                            
+
+                        </div>
+                    </div>
+                </div>
+                <div class="search link-underborder">
+                    <div class="search-text">
+                        <span>搜尋</span>
+                    </div>
+                    <div class="search-image link-underborder">
+                        <img src="./image/放大鏡.png" alt="">
+                    </div>
+                </div>
+                <div class="shopping-cart link-underborder">
+                    <div class="shopping-cart-text">
+                        <span>購物車</span>
+                    </div>
+                    <div class="shopping-cart-image">
+                        <img src="./image/購物車.png" alt="">
+                    </div>
+                </div>
+                <div class="sign-in link-underborder">
+                    <div class="sign-in-text">
+                        <span>登入</span>
+                    </div>
+                    <div class="sign-in-image">
+                        <img src="./image/登入.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-bar">
+                <div class="menu-btn-block">
+                    <label for="menu" class="menu-btn">☰</label>
+                    <input type="checkbox" name="" id="menu">                    
+                </div>
+
+            </div>
+            <div class="mobile-bar-other">
+                <div class="search-image link-underborder">
+                    <img src="./image/放大鏡.png" alt="">
+                </div>
+                <img class="mobile-logo"
+                    src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                    alt="">
+                <div class="mobile-bar-right-block">
+                    <img src="./image/登入.png" alt="">
+                </div>
+                <div class="mobile-bar-right-block">
+                    <img src="./image/購物車.png" alt="">
+                </div>
+            </div>
+            <div class="mobile-bar-pop">
+                <ul>
+                    <li>Microsoft 365</li>
+                    <li>Office</li>
+                    <li>Windows</li>
+                    <li>Surface</li>
+                    <li>Xbox</li>
+                    <li>支援</li>
+                    <li>軟體</li>
+                    <li>個人電腦和設備</li>
+                    <li>娛樂</li>
+                    <li>Developer & IT</li>
+                    <li>其他</li>
+                    <li>檢視網站地圖</li>
+                </ul>
+            </div>
+
+        </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="slide-picture-block">
+                <span class="slide-picture">
+                    <img src="./image/max-laptop.jpg" alt="">
+                </span>
+                <div class="slide-picture-text">
+                    <div class="commodity-name">
+                        <h1>Surface Pro 7</h1>
+                    </div>
+                    <div class="commodity-description">
+                        <p>纖變萬化</p>
+                    </div>
+                    <div class="slide-picture-btn">
+                        <span>立即選購</span>
+                        <span class="arrow">＞</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="choice-bar">
+                <div class="microsoft365-block link-underborder">
+                    <img src="./image/office365.png" alt="">
+                    <p class="link-underborder">選擇您的 Microsoft 365</p>
+                </div>
+                <div class="surface-block link-underborder">
+                    <img src="./image/surface.png" alt="">
+                    <p class="link-underborder">選購Surface裝置</p>
+                </div>
+                <div class="window10-block link-underborder">
+                    <img src="./image/win10.png" alt="">
+                    <p>選購Windows 10</p>
+                </div>
+            </div>
+            <div class="for-personal">
+                <div class="product-bar">
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/laptopGo.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Surface Laptop Go</span>
+                            <p>運用時尚和效能兼具、最輕巧的 Surface 筆記型電腦，善加利用每一天。</p>
+                            <div class="hyperlink">
+                                <span>立即選購</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/365.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Microsoft 365</span>
+                            <p>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</p>
+
+                            <div class="hyperlink">
+                                <div class="hyperlink">
+                                    <span>最多可供6人使用</span>
+                                    <span class="arrow">＞</span>
+                                    <span style="padding-left: 40px;">適合1人使用</span>
+                                    <span class="arrow">＞</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/xbox.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Xbox Game Pass Ultimate</span>
+                            <p>Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</p>
+
+                            <div class="hyperlink">
+                                <span>立即加入</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/edge.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Microsoft Edge</span>
+                            <p>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</p>
+
+                            <div class="hyperlink">
+                                <span class="">立即下載</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one-drive-bar">
+                <div class="slide-picture-block">
+                    <span class="slide-picture">
+                        <img src="./image/onedrive.jpg" alt="">
+                    </span>
+                    <div class="slide-picture-text">
+                        <div class="commodity-name">
+                            <h1>Microsoft OneDrive</h1>
+                        </div>
+                        <div class="commodity-description">
+                            <p>將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</p>
+                        </div>
+                        <div class="slide-picture-btn">
+                            <span>深入了解</span>
+                            <span class="arrow">＞</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="busuness">
+                <div class="busuness-text-bar">
+                    <span>適用於商務</span>
+                </div>
+                <div class="product-bar">
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/商務sur.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">適用於商務的 Surface</span>
+                            <p>無論從事哪種工作，都有一款有助於成功的 Surface。</p>
+                            <div class="hyperlink">
+                                <span class="link-underborder">立即選購</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/商務365.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Microsoft 365 商務版</span>
+                            <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
+                            <div class="hyperlink">
+                                <span class="link-underborder">立即選購</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/Teams.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Microsoft Teams</span>
+                            <p>聊天、開會、通話和共同作業。</p>
+
+                            <div class="hyperlink">
+                                <span class="link-underborder">深入了解</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/Viva.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <span class="product-text-title">Microsoft Viva 簡介</span>
+                            <p>探索新的員工體驗平台，其設計旨在讓人員在工作時聯繫、專注、學習和成長。</p>
+                            <div class="hyperlink">
+                                <span class="link-underborder">深入了解</span>
+                                <span class="arrow">＞</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-bar">
+                <div class="containger">
+                    <div class="social-bar-text">
+                        <span>
+                            關注 Microsoft
+                        </span>
+                        <img src="./image/facebook.png" alt="">
+                        <img src="./image/youtube.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-block">
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">最新動向</span>
+                    <ul>
+                        <li class="link-underborder">Microsoft 365</li>
+                        <li class="link-underborder">Surface Go</li>
+                        <li class="link-underborder">Surface Book 2</li>
+                        <li class="link-underborder">Surface Pro</li>
+                        <li class="link-underborder">Windows 10 應用程式</li>
+                    </ul>
+                </div>
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">Microsoft Store</span>
+                    <ul>
+                        <li class="link-underborder">帳戶設定檔</li>
+                        <li class="link-underborder">下載中心</li>
+                        <li class="link-underborder">Microsoft Store 支援</li>
+                        <li class="link-underborder">退貨/退款</li>
+                        <li class="link-underborder">訂單追蹤</li>
+                    </ul>
+                </div>
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">教育</span>
+                    <ul>
+                        <li class="link-underborder">Microsoft 在教育領域的應用</li>
+                        <li class="link-underborder">學生適用的 Office</li>
+                        <li class="link-underborder">Microsoft Store 支援</li>
+                        <li class="link-underborder">Microsoft Azure 在教育領域的應用</li>
+                    </ul>
+                </div>
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">企業</span>
+                    <ul>
+                        <li class="link-underborder">Azure</li>
+                        <li class="link-underborder">AppSource</li>
+                        <li class="link-underborder">汽車</li>
+                        <li class="link-underborder">政府機構</li>
+                        <li class="link-underborder">醫療保健</li>
+                        <li class="link-underborder">製造</li>
+                        <li class="link-underborder">金融服務</li>
+                        <li class="link-underborder">零售</li>
+                    </ul>
+                </div>
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">開發人員</span>
+                    <ul>
+                        <li class="link-underborder">Microsoft Visual Studio</li>
+                        <li class="link-underborder">Windows 開發人員中心</li>
+                        <li class="link-underborder">開發人員中心</li>
+                        <li class="link-underborder">Microsoft 開發人員計畫</li>
+                        <li class="link-underborder">Channel 9</li>
+                    </ul>
+                </div>
+                <div class="footer-block-card">
+                    <span class="footer-block-card-title">公司</span>
+                    <ul>
+                        <li class="link-underborder">人才招募</li>
+                        <li class="link-underborder">公司新聞</li>
+                        <li class="link-underborder">Microsoft 隱私權</li>
+                        <li class="link-underborder">投資者</li>
+                        <li class="link-underborder">安全性</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-information">
+                <div class="language">
+                    <img src="image/earth.png" alt="">
+                    <span class="link-underborder">中文(台灣)</span>
+                </div>
+                <div class="company-link ">
+                    <span class="link-underborder">連絡 Microsoft</span>
+                    <span class="link-underborder">隱私權</span>
+                    <span class="link-underborder">使用規定</span>
+                    <span class="link-underborder">商標</span>
+                    <span class="link-underborder">有關我們的廣告訊息</span>
+                    <span>© Microsoft 2021</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB頁面</title>
+
+    <style>        
+        *
+        {
+            box-sizing: border-box;
+        }
+        
+        body
+        {
+            margin: 0px;
+
+        }
+
+        #All 
+        {
+            width: 100%;
+            height: 100%;
+        }
+/*-------------------------------------------------------------*/
+        #Navbar
+        {
+            width: 100%;
+            height: 56px;
+            background-color: white;
+            position: relative;
+            padding : 8px 16px;
+        }   
+
+        #NavBarDetail
+        {
+            width : 100%;
+            height : 100%;
+            background-color: white;
+
+        }
+
+        #BarLeft
+        {
+            width : 360px;
+            height : 100%;
+            background-color: rgb(255, 187, 0);
+            float : left;            
+        }
+
+        #FBicon
+        {
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+            float:left;              
+            margin-left: 3px;
+            border-radius: 2000px;
+
+        }
+
+        #SearchBar
+        {
+            width: 260px;
+            height: 100%;
+            background-color: white;
+            float:left;
+            border:black 1px solid;
+        }
+         #SearchBarImage
+        {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            float: left;
+            margin-left: 10px;
+            margin-top: 5px;
+        } 
+        #SeachBarText
+        {
+            width: 70%;
+            height: 100%;
+            float: right;
+            border: none;
+            margin-right: 10px;     
+            float: left;       
+        }
+
+
+        #BarMid
+        {
+            width : 650px;
+            height : 40px;
+            background-color: darkorange;          
+            float : left;
+            position: absolute;
+            left: calc(50% - 325px);
+            
+        }
+
+
+        #BarMidHome
+        {
+            width: 20%;
+            height: 100%;
+            background-color: lightblue;
+            float: left;
+        }
+
+        #BarMidWatch
+        {
+            width: 20%;
+            height: 100%;
+            background-color: lightcoral;
+            float: left;
+        }
+
+        #BarMidMarket
+        {
+            width: 20%;
+            height: 100%;
+            background-color: lightcyan;
+            float: left;
+        }
+        
+        #BarMidClub
+        {
+            width: 20%;
+            height: 100%;
+            background-color: lightgoldenrodyellow;
+            float: left;
+        }
+
+        #BarMidGame
+        {
+            width: 20%;
+            height: 100%;
+            background-color: lightgray;
+            float: left;
+        }
+
+        #BarRight
+        {
+            width : 287px;
+            height : 100%;
+            background-color: white;
+            float : right;
+            
+        }
+
+        #BarRightName
+        {
+            width:30%;
+            height: 100%;
+            background-color: rgb(116, 111, 111);
+            border-radius: 60px;
+
+            float: left;
+        }
+
+        #BarRightCreat
+        {
+            width: 12%;
+            height: 100%;
+            background-color: rgb(116, 111, 131);
+
+            float: left;
+            margin-left: 12px;
+        }
+
+        #BarRightMessanger
+        {
+            width: 12%;
+            height: 100%;
+            background-color: rgb(116, 111, 131);
+
+            float: left;
+            margin-left: 12px;
+        }
+
+        #BarRightNotification
+        {
+            width: 12%;
+            height: 100%;
+            background-color: rgb(116, 111, 131);
+
+            float: left;
+            margin-left: 12px;
+        }
+
+        #BarRightAccount
+        {
+            width: 12%;
+            height: 100%;
+            background-color: rgb(116, 111, 131);
+
+            float: left;
+            margin-left: 12px;
+        }
+
+/*-------------------------------------------------------------*/
+        #Banner
+        {
+            width : 100%;
+            
+            background-color: beige;
+        }
+
+        #BannerDetail
+        {
+            width : 100%;
+            height : 100%;
+            background-color: rgb(126, 126, 104);
+            float:left            
+        }
+
+        #BannerPhotoSticker
+        {
+            width : 200px;
+            height : 200px;
+            background-image: url( 'http://4.bp.blogspot.com/_nG0Xe85HXPs/SE_47MrqjAI/AAAAAAAABgk/saP_P-5SRqk/s320/%E6%9D%B1%E6%B5%B7%E5%B8%9D%E7%9A%87.05.jpg' );
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 3000px;
+            position: absolute;
+            left: calc(50% - 100px);
+            top: 20%;
+            z-index: 3;
+            
+            float:left            
+        }
+
+        #CameraPhoto
+        {
+            width : 48px;
+            height : 48px;
+            background-color: cornflowerblue;
+            border-radius: 3000px;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+        }
+
+        #BannerCoverFloor
+        {
+            width : 100%;
+            height : 350px;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,255,201,0.10688025210084029) 100%);
+            position: relative;
+            float: left;
+            z-index: 1;
+        }
+
+        #BannerCoverPhoto
+        {
+            width : 1045px;
+            height : 350px;            
+            background-image: url( 'https://flameracing.files.wordpress.com/2021/02/19910526_tokai_teio.jpg' );
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            z-index: 2;
+            position: absolute;
+            left: calc(50% - 522px);
+        }
+
+        #CoverPhotoEditButtom
+        {
+            width: 130px;
+            height: 30px;
+            background-color: gray;
+            position: absolute;
+            right:0;
+            bottom: 0;
+            line-height: 30px;
+            padding-left: 30px;
+        }
+
+        #BannerIntroBar 
+        {
+            width: 100%;
+            height: 99px;
+            background-color:rgba(0,255,255,0.3) ;
+            position: relative;
+            float:left;
+            border-bottom: black 2px solid ;
+        }
+        #BannerIntro
+        {
+            width: 900px;
+            height: 99px;
+            background-color:rgba(0,255,255,0.3) ;
+            padding: 16px;
+            float:left;
+            position: absolute;
+            left: calc(50% - 450px);
+        }
+        #BannerIntroText
+        {
+            width: 102px;
+            height: 59px;
+            padding: 6px;
+            float:left;
+            position: absolute;
+            left: calc(50% - 51px);
+        }
+
+        #IntroTextName
+        {
+            width: 100%;
+            height: 38px;         
+            line-height: 38px;
+            padding-left: 10px;
+            margin: -20px auto 0;
+            font-size: 25px;
+        }
+        #IntroLink
+        {
+            width: 90px;
+            height: 40px;
+            clear: both;
+            float: left;
+            line-height: 38px;
+            margin: 0 auto 0;            
+            padding-left: 13px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: blue;
+        }
+
+
+        
+
+/*-------------------------------------------------------------*/
+        #Container
+        {
+            width:100%;
+            height: 60%;
+            background-color: blue;            
+        } 
+
+    </style>    
+
+</head>
+
+<body>
+    <div id="All">
+        <div id="Navbar">
+            <div id="NavBarDetail">
+                <div id="BarLeft">
+                    <div id = "FBicon">
+    
+                    </div>
+    
+                    <div id = "SearchBar">
+                        <div id="SearchBarImage">
+
+                        </div>
+                        <input id = SeachBarText type="text" placeholder="搜尋Facebook">
+    
+                    </div>
+                </div> 
+    
+                <div id="BarMid">
+                    <div id="BarMidHome">
+
+                    </div>
+
+                    <div id="BarMidWatch">
+
+                    </div>
+
+                    <div id="BarMidMarket">
+
+                    </div>
+
+                    <div id="BarMidClub">
+
+                    </div>
+
+                    <div id="BarMidGame">
+
+                    </div>
+                </div> 
+    
+                <div id="BarRight">
+                    <div id="BarRightName">
+
+                    </div>
+
+                    <div id="BarRightCreat">
+
+                    </div>
+
+                    <div id="BarRightMessanger">
+
+                    </div>
+                    
+                    <div id="BarRightNotification">
+
+                    </div>
+
+                    <div id="BarRightAccount">
+
+                    </div>
+
+                </div> 
+    
+            </div>    
+    
+        </div>
+        <!-- ------------------------------------------------------------- -->
+        <div id="Banner">
+            
+            <div id="BannerDetail">
+                <div id="BannerPhotoSticker">
+                    <div id="CameraPhoto">
+
+                    </div>
+                </div>
+                <div id="BannerCoverFloor">
+                    <div id="BannerCoverPhoto">
+                        <div id="CoverPhotoEditButtom">
+                            編輯封面照片
+                        </div>
+
+                    </div>                    
+                </div>
+                
+                <div id="BannerIntroBar">
+                    <div id="BannerIntro">                        
+                        <div id="BannerIntroText">
+                            <div id="IntroTextName">
+                                賴仁鴻
+                            </div>
+                            <div id="IntroLink">
+                                個人簡介
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                    
+                
+    
+                <div id="BannerPageBar">
+                    <div id="BannerPageBarContainer">
+                        <div id="PagePost">
+    
+                        </div>
+    
+                        <div id="PageAbout">
+                        </div>
+
+                        <div id="PageFriend">
+                        </div>
+                            
+                        <div id="PagePhoto">
+
+                        </div>
+
+                        <div id="PageLimit">
+                        
+                        </div>
+
+                        <div id="PageMore">
+    
+                         </div>  
+    
+                    </div>    
+            
+                </div>
+                <div id="BannerShot">
+
+                </div>
+    
+                <div id="BannerName">
+    
+                </div>
+            
+            </div>
+
+        </div>
+    
+        <div id="Container">
+    
+        </div>
+    </div>
+
+</body>
+</html>

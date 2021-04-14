@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中拉麵介紹</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        nav {
+            width: 100%;
+            /* background-color: black; */
+        }
+
+        .container {
+            width: 100%;
+            padding: 0px 20%;
+            height: 100%;
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-title {
+            font-size: 48px;
+            line-height: 100px;
+        }
+
+        .ramenmap {
+            width: 100%;
+            height: calc(100vh - 100px);
+            background-image: url(./image/未命名.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .introbar {
+            /* height: 100px; */
+            width: 100%;
+            padding: 0px 7%;
+            display: flex;
+            /* background-color: black; */
+            background-color: blueviolet;
+        }
+
+        .btn-group {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn,
+        .btn a {
+            height: 100%;
+            line-height: 100%;
+            font-size: 24px;
+            color: white;
+            background-color: brown;
+            border: black 2px solid;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .taichung-ramen-intro {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            background-color: black;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
+
+        .intro-block {
+            height: 100%;
+            width: 50%;
+            background-color: green;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        .intro-block span {
+            background-color: white;
+            font-size: 48px;
+
+        }
+
+        #tcramen-intro-left-block {
+            background-image: url(./image/taiwanRamen.png);
+
+        }
+
+        #tcramen-intro-right-block {
+            background-image: url(./image/2020ramen.jpg);
+
+        }
+
+        .yamashita,
+        .two-ramen-intro {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            /* background-color: brown; */
+        }
+
+        .yamashita-image {
+            width: 50%;
+            height: 100%;
+            background-image: url(./image/yamashitaramen.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .yamashita-image img {
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .yamashita-text {
+            width: 50%;
+            height: 100%;
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            padding-left: 50px;
+        }
+
+        .yamashita-text h2 {
+            font-size: 48px;
+        }
+
+        .nanatori,
+        .yoshi {
+            height: 49%;
+            width: 100%;
+            /* background-color: brown; */
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            margin-bottom: 1%;
+        }
+
+
+        .nanatori-image,
+        .yoshi-image {
+            width: 50%;
+            height: 100%;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .nanatori-image {
+            background-image: url(./image/tori.jpg);
+        }
+
+        .nanatori-text,
+        .yoshi-text {
+            width: 50%;
+            height: 100%;
+            /* background-color: chartreuse; */
+        }
+
+        .two-ramen-intro {
+            flex-direction: column;
+        }
+
+        .yoshi-image {
+            background-image: url(./image/yoshi.jpg);
+        }
+
+        .yoshi-text {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .three-ramen-intro {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .leejhon,
+        .tokyo {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .fish {
+            width: 34%;
+            height: 100%;
+            padding: 0% 0.5%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .three-image {
+            width: 100%;
+            height: 67%;
+            padding-bottom: 1%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+        }
+
+        .three-text {
+            width: 100%;
+            height: 33%;
+        }
+
+        .leejhon .three-image {
+            background-image: url(./image/貍匠.jpg);
+            /* background-color: ;       */
+        }
+
+        .fish .three-image {
+            background-image: url(./image/鮭魚.jpg);
+        }
+
+        .tokyo .three-image {
+            background-image: url(./image/tokyo.jpg);
+        }
+
+        .footer-title {
+            width: 100%;
+            height: 150px;
+            background-color: azure;
+        }
+
+
+        @media(max-width: 1280px) {
+            .container {
+                padding: 0px 125px;
+            }
+
+            .nav-title {
+                font-size: 24px;
+                line-height: 50px;
+            }
+
+            .btn,
+            .btn a {
+                font-size: 14px;
+            }
+
+            .yamashita-text h2 {
+                font-size: 24px;
+            }
+
+            .yamashita-text h2,
+            h3,
+            h4 {
+                padding: 0px;
+                margin: 0px;
+            }
+
+        }
+
+        @media(max-width: 1080px) {
+            .container {
+                padding: 0px;
+            }
+
+
+        }
+
+        @media(max-width: 800px) {
+            .two-ramen-intro {
+                height: 200vh;
+                flex-wrap: wrap;
+            }
+
+            .nanatori,
+            .yoshi {
+                height: 49%;
+                width: 100%;
+                display: flex;
+                margin-bottom: 1%;
+            }
+
+            .nanatori-image,
+            .yoshi-image {
+                width: 100%;
+                height: 49%;
+            }
+
+            .nanatori-text,
+            .yoshi-text {
+                height: 49%;
+                width: 100%;
+                padding: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .yoshi{
+                flex-direction: column-reverse;
+            }
+
+            .main-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <span class="nav-title">台中拉麵地圖with捷運</span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="ramenmap"></div>
+        <div class="introbar">
+            <div class="btn-group">
+                <div class="btn">
+                    <a href="#taichung-ramen-intro">2020台中拉麵金賞
+                    </a>
+                </div>
+                <div class="btn">
+                    <a href="#yamashita">山下拉麵
+                    </a>
+                </div>
+                <div class="btn">
+                    <a href="#two-ramen-intro">有囍/七面鳥
+                    </a>
+                </div>
+                <div class="btn">
+                    <a href="#three-ramen-intro">貍匠/鮭の大助/東京超極丸
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="taichung-ramen-intro" class="taichung-ramen-intro">
+            <div id="tcramen-intro-left-block" class="intro-block">
+                <div class="main-text">
+                    <span>
+                        台灣拉麵賓果<br>
+                        淡粉紅為台中拉麵名店
+                    </span>
+                </div>
+            </div>
+            <div id="tcramen-intro-right-block" class="intro-block">
+                <div class="main-text">
+                    <span>
+                        如果還是選擇障礙<br>
+                        不如就從這份單下手<br>
+                        或是下面介紹<br>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="yamashita" class="yamashita">
+            <div class="container">
+                <div class="yamashita-image">
+                    <!-- <img src="./image/yamashitaramen.jpg" alt=""> -->
+                </div>
+                <div class="yamashita-text">
+                    <h2>山下公園-繁盛焦蒜豚雞濃湯</h3>
+                        <h3>臺中最推薦的店家，位於第六市場</h3>
+                        <h3>第一次去記得點臺灣鹹就好</h3>
+                        <h4>老大是胖虎 我要進來了(誤</h4>
+                </div>
+            </div>
+        </div>
+        <div id="two-ramen-intro" class="two-ramen-intro">
+            <div class="container">
+                <div class="nanatori">
+                    <div class="nanatori-image">
+                    </div>
+                    <div class="nanatori-text">
+                        <h2>七面鳥的二郎系列<br>
+                            位於公益公園附近<br>
+                            前身為麵屋虎匠<br>
+                            擅長直拳系的特濃厚湯頭<br>
+                            前幾年有報導台中很狂的二郎就是這家<br>
+                            另外七面鳥在日文的意思是火雞<br>
+                        </h2>
+                    </div>
+                </div>
+                <div class="yoshi">
+                    <div class="yoshi-text">
+                        <h2>有娃的是有囍的限定拉麵-有喜<br>
+                            位於第一廣場,電子街附近<br>
+                            擅長雞白湯系列<br>
+                            如果是不常吃拉麵會推薦這家跟山下<br>
+                            山下的胖虎是從這邊跳出去自己做的<br>
+                            另外這碗是蝦味咖哩乾拉麵
+                        </h2>
+                    </div>
+                    <div class="yoshi-image"></div>
+                </div>
+            </div>
+        </div>
+        <div id="three-ramen-intro" class="three-ramen-intro">
+            <div class="container">
+                <div class="leejhon">
+                    <div class="three-image"></div>
+                    <div class="three-text">
+                        <h3>狸匠拉麵<br>霜降牛骨清湯拉麵</h3>
+                        <h4>位於忠孝夜市旁</h4>
+                        <h4>營業至半夜兩點，半夜也能吃</h4>
+                    </div>
+                </div>
+                <div class="fish">
+                    <div class="three-image"></div>
+                    <div class="three-text">
+                        <h3>創作麵坊・鮭の大助<br>繁盛特濃鮭白湯</h3>
+                        <h4>位於向上市場附近，七面鳥二店</h4>
+                        <h4>主要以魚類湯頭為主</h4>
+                    </div>
+                </div>
+                <div class="tokyo">
+                    <div class="three-image"></div>
+                    <div class="three-text">
+                        <h3>東京超極丸<br>濃湯特製SP</h3>
+                        <h4>位於廣三sogo附近</h4>
+                        <h4>以東京醬油為賣點，而且肉真D好吃</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="footer-title">by ZiZiHo 04/12</span>
+        </div>
+    </footer>
+</body>
+
+</html>

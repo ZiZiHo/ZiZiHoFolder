@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #nav {
+            width: 300px;
+            height: 100vh;
+            background-color: black;
+            float: left;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            margin: auto;
+            margin-bottom: 20px;
+            
+        }
+
+        .btn-group {
+            width: 200px;
+            height: 260px;
+            background-color: green;
+            margin: auto;
+        }
+
+        .btn:nth-child(2)
+        {
+            margin: 10px 0px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 80px;
+            background-color: lavender;
+            text-align: center;
+            line-height: 80px;
+
+        }
+
+        .container {
+            width: 80%;
+            height: 100%;
+            background-color: violet;
+            margin: auto;
+        }
+
+        #nav .container {
+            padding-top: 50px;
+        }
+
+        #main .container {
+            widows: 880px;
+            padding-top: 15%;
+        }
+
+        #main {
+            width: calc(100% - 300px);
+            height: 100vh;
+            background-color: blanchedalmond;
+            float: left;
+        }
+
+        .image-group
+        {
+            width:calc(60% + 20px);
+            height: 80%;
+            margin: auto; 
+            background-color: tomato;
+        }
+
+        .image-group .image
+        {
+            height: 100%;
+            width: calc(calc(100% - 20px) / 3);
+            background-color: turquoise;
+            float: left;
+        }
+
+        .image:nth-child(2)
+        {
+            margin: 0px 10px;
+        }
+
+        @media(max-width: 1280px) {}
+
+        @media(max-width: 960px) {
+            #nav {
+                width: 100%;
+                height: 120px;
+            }
+
+            #main {
+                width: 100%;
+                /* height: unset; */
+            }
+        }
+
+        @media(max-width: 576px) {}
+    </style>
+
+
+</head>
+
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="https://stickershop.line-scdn.net/stickershop/v1/product/3008928/LINEStorePC/main.png;compress=true" alt="" class="center"> -->
+            </div>
+            <div class="menu-btn"></div>
+            <div class="btn-group">
+                <div class="btn">
+                    按鈕1
+                </div>
+                <div class="btn">
+                    按鈕2
+                </div>
+                <div class="btn">
+                    按鈕3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="image-group">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

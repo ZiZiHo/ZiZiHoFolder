@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        #nav{
+            width: 100%;
+            height: 57px;
+            position: relative;
+            padding: 0px 17px;
+        }
+        #logo{
+            width: 330px;
+            height: 100%;
+            float: left;
+            padding: 7.5px 0px;
+        }
+        #fb_logo{
+            width: 42px;
+            height:42px;
+            border-radius: 50%;
+            background-color: cornflowerblue;
+            float:left;
+        }
+        #search{
+            height: 42px;
+            width: 280px;
+            border-radius: 21px;
+            float: right;
+            background-color: rgb(240, 240, 240);
+            padding: 11px;
+        }
+        #search_img{
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: royalblue;
+        }
+        #search_input{
+            height: 20px;
+            width: calc(100% - 20px);
+            background-color: rgb(240, 240, 240);
+            border: none;
+            outline: none;
+            float: left;
+        }
+
+        #links{
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 325px);
+        }
+        #link{
+            width: 130px;
+            height: 100%;
+            background-color: blueviolet;
+            border: 1px solid black;
+            float: left;
+        }
+        #icons{
+            width: 315px;
+            height: 100%;
+            float: right;
+            /* 因為知道子層與自己的高度 所以可以藉由padding做到子元素的垂直對齊 */
+            padding: 8.5px 0px;
+        }
+        #icon1{
+            width: 125px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: brown;
+            float: left;
+            /* 因為知道子層與自己的高度 所以可以藉由padding做到子元素的垂直對齊 */
+            padding: 5px;
+        }
+        #icon2{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: brown;
+            float: left;
+            margin: 0px 0px 0px 7px;
+        }
+        #icon3{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: brown;
+            float: left;
+            margin-left:7px;
+        }
+        #icon4{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: brown;
+            float: left;
+            margin-left: 7px;
+
+        }
+        #icon5{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: brown;
+            float: left;
+            margin-left: 7px;
+
+        }
+        #person_icon{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: blue;
+            float: left;
+        }
+
+        #person_name{
+            height: 30px;
+            color: chartreuse;
+            float: left;
+
+            margin-left: 10px;
+            /* 元素內如果只有單行文字有兩種方法可以使他垂直至中對其 */
+            /* 量出文字本身的高後，用padding去置中 */
+            /* padding: 4.09px 0px; */
+
+            /* 使用line-height (文字行高)，讓行高與元素一樣高度就可以達成垂直置中*/
+            line-height: 30px; 
+            /* 行高的預設值約為字體大小的1.2倍，但是隨著字體本身不同可能會有些許落差 */
+            
+        }
+
+        /* 以下為個人資料區域 */
+        #personal_info{
+            background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 44%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            border-bottom: 1px solid gray;
+        }
+        #banner{
+            width: 940px;
+            height: 350px;
+            margin: auto;
+            background-color: cadetblue;
+            border-radius: 0% 0% 10px 10px;
+            position: relative;
+        }
+        #person_picture{
+            width: 177px;
+            height: 177px;
+            background-color: crimson;
+            border-radius: 50%;
+            /* border是一種複合屬性 可以同時輸入框線的 粗度 樣式 與顏色 */
+            border: 3px solid white;
+            /* 其實他就是以下三種屬性結合 
+            border-width: 3px;
+            border-style: solid;
+            border-color: white; */
+
+            position: absolute;
+            /* 往底邊的外部移動所以使用負值 */
+            bottom: -15px;
+            left: calc(50% - 88.5px);
+        }
+        #camera{
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: gray;
+            /* position: absolute;的參照方式，是自己的父層上面擁有position屬性的 */
+            /* 如果自己的父層沒有 position屬性 就會繼續往父層的父層去參照，如果一路上去都沒有，那最後就會參造body*/
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #change_picture{
+            width: 140px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: greenyellow;
+            position: absolute;
+            right: 30px;
+            bottom: 15px;
+            padding: 11px;
+        }
+        #change_camera{
+            width: 18px;
+            height: 18px;
+            float:left;
+            background-color: grey;
+        }
+        #change_text{
+            height: 18px;
+            float: right;
+            /* 當內容只有一行文字的時候 對齊大絕招 */
+            line-height: 18px;
+        }
+
+        #name{
+            font-size: 24px;
+            margin: auto;
+            text-align:center;
+        }
+        #word{
+            margin: auto;
+            text-align:center;
+        }
+        #intro{
+            width: 870px;
+            margin: auto;
+            /* padding 跟 margin三個數字的寫法 上 左右一組 下 */
+            padding: 25px 0px 25px;
+            /* 單純新增下邊框 當作畫面中的水平分隔線 */
+            border-bottom: 1px solid gray;
+        }
+        #function{
+            height: 60px;
+            width: 870px;
+            margin: auto;
+        }
+        #intro_edit{
+            color: blue;
+            /* 文字底線的裝飾 */
+            text-decoration: underline;
+            margin: auto;
+            text-align:center;
+            
+        }
+        #left{
+            height: 100%;
+            float: left;
+            
+        }
+        #btn{
+            float: left;
+            height: 100%;
+            padding: 18.5px 15px;
+        }
+
+        #right{
+            height: 100%;
+            float:right;
+            padding: 12.5px 0px;
+        }
+        #btn2-1{
+            height: 35px;
+            background-color: gray;
+            border-radius: 5px;
+            float: left;
+
+        }
+        #btn2{
+            width: 45px;
+            height: 35px;
+            background-color: gray;
+            border-radius: 5px;
+            float: left;
+            margin-left: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <div id="fb_logo"></div>
+            <div id="search">
+                <div id="search_img"></div>
+                <input id="search_input" type="text" placeholder="搜尋 Facebook">
+            </div>
+        </div>
+        <div id="links">
+            <div id="link"></div>
+            <div id="link"></div>
+            <div id="link"></div>
+            <div id="link"></div>
+            <div id="link"></div>
+        </div>
+        <div id="icons">
+            <div id="icon1">
+                <div id="person_icon"></div>
+                <div id="person_name">陳小刀</div>
+            </div>
+            <div id="icon2"></div>
+            <div id="icon3"></div>
+            <div id="icon4"></div>
+            <div id="icon5"></div>
+        </div>
+    </div>
+    <div id="personal_info">
+        <div id="banner">
+            <div id="person_picture">
+                <div id="camera"></div>
+            </div>
+            <div id="change_picture">
+                <div id="change_camera"></div>
+                <div id="change_text">編輯封面相片</div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="intro">
+                <div id="name">陳小刀</div>
+                <div id="word">風靡萬千少女</div>
+                <div id="word">高進的徒弟</div>
+                <div id="intro_edit">編輯</div>
+            </div>
+            <div id="function">
+                <div id="left">
+                    <div id="btn">貼文</div>
+                    <div id="btn">關於</div>
+                    <div id="btn">朋友 1000</div>
+                    <div id="btn">相片</div>
+                    <div id="btn">現實動態典藏</div>
+                    <div id="btn">更多▼</div>
+                </div>
+                <div id="right">
+                    <div id="btn2-1">
+                        <div id="pan"></div>
+                        <div id="edit">編輯個人檔案</div> 
+                    </div>
+                    <div id="btn2"></div>
+                    <div id="btn2"></div>
+                    <div id="btn2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline"></div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 在CSS選擇器中 ID的宣告使用#當開頭, class的宣告使用.當開頭 */
+        #box1{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin: 10px;
+        }
+
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin: 10px;
+        }
+
+        .heavy{
+            font-size: 32px;
+            color: red;
+        }
+
+        /* 在CSS選擇器中，如果要指定標籤。用法是直接輸入標籤本身 */
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: darkgray;
+        }
+
+        /* 在CSS選擇器中，如果要頁面所有標籤都套用，會使用"*" */
+
+        *{
+            /* 我希望頁面中"所有的"元素都會根據框線與內距去計算寬高 */
+            box-sizing: border-box;
+        }
+
+
+        .big_green_box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        #Red{
+            background-color: red;
+        }
+
+        .man{
+            background-color: red;
+        }
+        .glass{
+            background-color: green;
+        }
+        .man.glass{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(119, 128, 0);
+        }
+        /* 如果你有一個class同時符合三個的話 */
+        .man.glass.tall{
+            width: 250px;
+            height: 250px;
+            background-color: purple;
+        }
+
+        .bold{
+            background-color: black !important;
+        }
+
+    </style>
+</head>
+<body>
+    <p>CSS的目的是為了給HTML設定樣式 (如大小，顏色，間距等等)</p>
+    <p>將你希望的樣式現在style裡面，再藉由CSS的選擇器去指定到你想更動的標籤</p>
+    <p>使用方法會搭配以下幾種常見的CSS選擇器</p>
+    
+    <p>id, class, 標籤本身, *</p>
+
+    <p>id = 類似身分證字號，只能指派給單一個標籤。例</p> 
+
+    <div id="Kevin">我是凱文</div>
+
+    <p>class = 類別，可以一次給多個標籤使用。就像是有戴眼鏡的人。四輪的汽車，例如</p>
+
+    <div class="glass">戴眼鏡的</div>
+
+    <p>class 與 id 的差別在於說，id是1對1。 但同一個class可以有許多人擁有</p>
+
+    <div class="classmate">同學</div>
+    <div class="classmate glass">戴眼鏡的同學</div>
+    <div class="classmate tall">很高的同學</div>
+    <div class="classmate glass tall">很高，戴眼鏡的同學</div>
+    <div class="teacher">老師</div>
+
+    <p>但你會說 老師，下面的兩個方塊 用 id 跟 class 結果都一樣阿。所以我是不是隨便選一個就好?</p>
+
+    <div class="box1"></div>
+    <div id="box1"></div>
+
+    <p>不要，為什麼。因為保持檔案的一致性。方便維護跟管理，那class的泛用性又比較高(可以給多個 也可以混著用)，所以一般來說給予樣式我們都會建議用class</p>
+
+    <p>標籤本身， 就是你常見到的"div" "body" "ul" "a" 這些標籤。它的作用範圍會是全文件中 只要使用這個標籤的元素 例如說</p>
+
+    <div>我們甚麼CLASS ID都沒給</div>
+    <div>我們甚麼CLASS ID都沒給</div>
+    <div>我們甚麼CLASS ID都沒給</div>
+
+    <p>最後則是"*" 這代表網頁中，所有的元素 (無論是div body .....etc) 全部都要套用</p>
+
+
+    <p class="heavy">CSS權重 重點分隔線</p>
+
+    <p>所謂權重，指的就是優先權，以一般常見的來說權重如以下所示</p>
+
+    <p>inline style(行內樣式) > ID > Class > Element(元素) > *</p>
+
+    <!-- 以下為行內樣式例子 -->
+    <div style="width: 150px; height: 200px; background-color: red;" id="box1">
+        挖，我id的樣式被行內樣式蓋過去了~
+    </div>
+
+    <p>權重大的屬性會去蓋掉權重小的屬性。但是如果說沒有被覆寫到的話就會累加上去</p>
+
+
+    <div id="Red" class="big_green_box">我同時有id跟class，除了顏色被id覆寫以外，其他的值還保留著</div>
+
+    <p>權重除了有大小以外，他是可以累加的。比如</p>
+
+    <div class="man glass"></div>
+    <div class="man glass tall"></div>
+
+    <p>但是，無論權重有多高。都不可能打到下一個等級</p>
+
+    <div class="man glass tall" id="box1"></div>
+
+    <p>最後. 有一個終極大魔王 叫做"!important"，只要指令的後面出現!important, 誰都得聽他的</p>
+
+    <div class="man glass tall bold" id="box1"></div>
+
+    <p>納因為他的力量太過強大。所以必須非常警慎使用。</p>
+
+
+</body>
+</html>
