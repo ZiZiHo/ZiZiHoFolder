@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .tab-btn-group {
+            width: 100%;
+            padding: 20px;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .tab-btn {
+            width: 160px;
+            height: 40px;
+            background-color: burlywood;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background-color: rgb(241, 227, 101);
+        }
+
+        .content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-area">
+        <div class="tab-btn-group">
+            <div id="btn1" class="tab-btn">按鈕1</div>
+            <div id="btn2" class="tab-btn">按鈕2</div>
+            <div id="btn3" class="tab-btn">按鈕3</div>
+        </div>
+    </div>
+    <div class="tab-content-group">
+        <div class="tab-content">
+            <div id="content1" class="content ">
+                <h1>
+                    內容1
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
+
+            <div id="content2" class="content">
+                <h1>
+                    內容2
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
+
+            <div id="content3" class="content">
+                <h1>
+                    內容3
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var btn_group = document.querySelectorAll('.tab-btn');
+        var content = document.querySelectorAll('.content');
+        var bCheck = [0, 0, 0];
+        console.log(btn_group);
+
+
+        // for (var i = 1 ; i < 3 ; i++) {}
+        btn_group[0].onclick = function () {
+            if (content[0].classList[content[0].classList.length - 1] == 'active')
+                content[0].classList.remove('active')
+            else {
+                clearall();
+                content[0].classList.add('active');
+            }
+        }
+
+        btn_group[1].onclick = function () {
+            if (content[1].classList[content[1].classList.length - 1] == 'active')
+                content[1].classList.remove('active');
+            else {
+                clearall();
+                content[1].classList.add('active');
+            }
+        }
+
+        btn_group[2].onclick = function () {
+            if (content[2].classList[content[2].classList.length - 1] == 'active')
+                content[2].classList.remove('active')
+            else {
+                clearall();
+                content[2].classList.add('active');
+            }
+        }
+
+        function clearall() {
+            content[0].classList.remove('active');
+            content[1].classList.remove('active');
+            content[2].classList.remove('active');
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
