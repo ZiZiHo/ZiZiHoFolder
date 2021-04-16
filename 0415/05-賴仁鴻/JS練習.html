@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .testblock {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(0, 255, 255);
+        }
+
+        .redblock {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="testblock">
+        
+    </div>
+    <script>
+
+
+        var box = document.querySelector('.testblock');
+
+        var iCount = 0;
+
+        var bCheckClick = false;
+
+        
+
+        box.onclick = function () {
+            bCheckClick = !bCheckClick
+            
+            console.log(bCheckClick);
+
+            if (!box.classList.contains('redblock')) {
+                box.classList.add('redblock');
+            }
+            else {
+                box.classList.remove('redblock');
+                console.log(box.classList.value);
+            }
+
+            
+        }
+
+
+
+    </script>
+</body>
+
+</html>

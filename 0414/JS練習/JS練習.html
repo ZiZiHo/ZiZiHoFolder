@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .testblock {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(0, 255, 255);
+        }
+
+        .redblock {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="testblock">
+        
+    </div>
+    <script>
+
+        //document 這個檔案
+        //document.querySelector 這個檔案的 css頁面 也就是 style裡的所有 css 屬性 或 選擇器可選範圍
+        //document.querySelector('.class || #id ... 任何css選擇器') 取得此css選擇器的 屬性
+        //document.querySelector('.testblock') 將.testblock class屬性拿下來
+        //用 =  賦予 box .testblock class屬性
+        var box = document.querySelector('.testblock');
+
+        var iCount = 0;
+
+        var bCheckClick = false;
+
+        
+
+        box.onclick = function () {
+            bCheckClick = !bCheckClick
+            
+            console.log(bCheckClick);
+
+            if (bCheckClick) {
+                box.classList.add('redblock');
+            }
+            else {
+                box.classList.remove('redblock');
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

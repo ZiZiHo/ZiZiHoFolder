@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .testblock {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .grade-input {
+            width: 200px;
+            /* height: 500px; */
+        }
+        #result{
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="testblock">
+        <label for="input-bar"></label>
+        <input type="text" class="grade-input" id="input-bar">
+        <input type="button" value="成績輸入" onclick="output()">
+        <input type="button" value="迴圈處理" onclick="Check()" class="testbtn">
+        <span id="result">結果</span>
+    </div>
+    <script>
+        
+        function output() {
+            var iGrade = document.getElementById('input-bar').value;
+
+            console.log(parseInt(iGrade).toString().length);
+            console.log(iGrade.length)           
+
+            // if (iGrade.length == 0 || parseInt(iGrade).toString().length != iGrade.length) {
+            //     document.getElementById("result").innerHTML = '輸入結果錯誤，請再輸入數值';
+            //     alert("輸入結果錯誤");
+            // }
+            // else{
+                Rank(iGrade);
+            // }
+            
+        }
+
+        function Check() {
+            var iScore = -50;
+
+            while (iScore++ < 120) {
+                Rank(iScore);
+            }
+        }
+
+        function Rank(iScore) {
+            var sTemp = '';
+            var sOutput = '你的成績為' + iScore + ' 評價為';
+            console.log(iScore);
+            console.log(typeof iScore);
+            if (iScore < 0) {
+                console.log(typeof iScore);
+                sOutput += '錯誤,分數為負分';
+            }
+            else if (iScore < 60) {
+                sOutput += '己等';
+            }
+            else if (iScore < 70) {
+                sOutput += '戊等';
+            }
+            else if (iScore < 80) {
+                sOutput += '丁等';
+            }
+            else if (iScore < 90) {
+                sOutput += '丙等';
+            }
+            else if (iScore < 100) {
+                sOutput += '乙等';
+            }
+            else if (iScore == 100) {
+                sOutput += '甲等';
+            }
+            else if(iScore > 100){
+                sOutput += '甲上';
+            }
+            else{
+                document.getElementById("result").innerHTML = '輸入資料為'+ iScore +'，型態錯誤 請再確認';
+                return 0;
+            }
+            console.log(sOutput);
+            document.getElementById("result").innerHTML = sOutput;
+            
+            
+        }
+
+    </script>
+</body>
+
+</html>

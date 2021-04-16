@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>        
+        img{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <img src="https://img.ruten.com.tw/s2/b/06/2c/21944719314476_591.jpg" alt="">
+    
+
+
+    <script>
+        var iCount = 0;
+
+        var oImage = document.querySelector('img')        
+        var sUrl_Kuuga = './image/kuuga.jpg';
+        var sUrl_Agito = './image/agito.jpg';
+        var sUrl_Ryuki = './image/Ryuki.jpg';
+        var sUrl_Faiz = './image/faiz.jpg';
+
+        var sUrl = [sUrl_Kuuga ,sUrl_Agito , sUrl_Ryuki , sUrl_Faiz]
+
+        oImage.onclick = function()
+        {   
+
+            oImage.src = sUrl[(Math.random() % 4)]           
+        }
+
+    </script>
+</body>
+</html>
