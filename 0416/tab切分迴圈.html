@@ -52,6 +52,9 @@
             <div id="btn1" class="tab-btn">按鈕1</div>
             <div id="btn2" class="tab-btn">按鈕2</div>
             <div id="btn3" class="tab-btn">按鈕3</div>
+            <div id="btn3" class="tab-btn">按鈕4</div>
+            <div id="btn3" class="tab-btn">按鈕5</div>
+            <div id="btn3" class="tab-btn">按鈕6</div>
         </div>
     </div>
     <div class="tab-content-group">
@@ -88,6 +91,36 @@
                     adipisci? Animi, enim!
                 </span>
             </div>
+            <div id="content4" class="content">
+                <h1>
+                    內容4
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
+            <div id="content5" class="content">
+                <h1>
+                    內容5
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
+            <div id="content6" class="content">
+                <h1>
+                    內容6
+                </h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, enim doloribus. Enim, iste! Minima
+                    consectetur dolor libero delectus perferendis nam rem aut doloribus ab quis. Dolores, culpa
+                    adipisci? Animi, enim!
+                </span>
+            </div>
         </div>
 
     </div>
@@ -95,52 +128,30 @@
     <script>
         var btn_group = document.querySelectorAll('.tab-btn');
         var content = document.querySelectorAll('.content');
-        var bCheck = [0, 0, 0];
-        console.log(btn_group);
+        var test = document.querySelectorAll('.tab-content');
 
+        console.log('測試用' + test);
 
         for (let i = 0; i < btn_group.length; i++) {
-            btn_group[i].onclick = function () {
-                if (content[i].classList[content[0].classList.length - 1] == 'active')
+            
+            btn_group[i].onclick = function () {                
+                if (content[i].classList[content[i].classList.length - 1] == 'active')
+                {
                     content[i].classList.remove('active')
+                }
                 else {
                     clearall();
                     content[i].classList.add('active');
                 }
             }
         }
-        // }
-        // btn_group[0].onclick = function () {
-        //     if (content[0].classList[content[0].classList.length - 1] == 'active')
-        //         content[0].classList.remove('active')
-        //     else {
-        //         clearall();
-        //         content[0].classList.add('active');
-        //     }
-        // }
-
-        // btn_group[1].onclick = function () {
-        //     if (content[1].classList[content[1].classList.length - 1] == 'active')
-        //         content[1].classList.remove('active');
-        //     else {
-        //         clearall();
-        //         content[1].classList.add('active');
-        //     }
-        // }
-
-        // btn_group[2].onclick = function () {
-        //     if (content[2].classList[content[2].classList.length - 1] == 'active')
-        //         content[2].classList.remove('active')
-        //     else {
-        //         clearall();
-        //         content[2].classList.add('active');
-        //     }
-        // }
+ 
 
         function clearall() {
-            content[0].classList.remove('active');
-            content[1].classList.remove('active');
-            content[2].classList.remove('active');
+            for (let i = 0 ; i < content.length ; i++) 
+            {
+                content[i].classList.remove('active');
+            }            
         }
 
 

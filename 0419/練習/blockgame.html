@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+
+        .blockarea{
+            width: 100%;
+            height: 100vh;
+            background-color: darkorange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .answerarea{
+            width: 800px;
+            height: 800px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkturquoise;
+        }
+        .block{
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="blockarea">
+        <div class="answerarea">
+            <div class="block"></div>
+        </div>
+    </div>
+
+    <script>
+        var temp = document.querySelector('.answerarea')
+
+        var iLevel = 1;
+        
+        temp.onclick = function(){
+
+            var rgb = getcolors();
+            console.log(rgb);
+            // console.log(temp.style['background-color']);
+            temp.style.background = rgb;
+            // temp.style['opacity'] = 0.5;
+        }
+
+
+        function getcolors()
+        {
+            return '#'+(0x1000000 + Math.random()*0xffffff).toString(16).substr(1,6);
+        }
+    </script>
+</body>
+</html>

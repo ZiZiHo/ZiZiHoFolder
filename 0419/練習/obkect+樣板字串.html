@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .card-group {
+            padding: 2.5%;
+            height: 100vh;
+            width: 100%;
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+
+        .card {
+            height: 600px;
+            width: 300px;
+            background-color: cyan;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .photo {
+            width: 100%;
+            height: 60%;
+        }
+
+        .content {
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-group">
+        <!-- <div class="card">
+            <div class="photo">
+                <img src="https://jatravelstory.com/wp-content/uploads/pixnet/1083922549_l.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <p>品名</p>
+                <p>價錢</p>
+                <p>內容物</p>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- 品茗 價錢 內容物 -->
+
+    <script>
+        var card_group = document.querySelector('.card-group')
+        var Yakult = {
+            img: 'https://jatravelstory.com/wp-content/uploads/pixnet/1083922549_l.jpg',
+            name: '超級多多綠',
+            price: 25,
+            content: "整罐養樂多+綠茶"
+        }
+        var green = {
+            img: 'https://niniandblue.com/wp-content/uploads/2017/07/1500552392-18235bfb8dfc9a422a49566b8125b129.jpg',
+            name: '小綠綠',
+            price: 25,
+            content: '綠茶+青蘋果+金桔'
+        }
+
+        var red = {
+            img: 'https://niniandblue.com/wp-content/uploads/2017/07/1500552392-92836a9933b4c578e2ec1d0ceb4d4d57.jpg',
+            name: '紅魔鬼',
+            price: 25,
+            content: '雪碧+石榴紅+椰果'
+        }
+
+        var nuclear = {
+            img: 'https://sites.google.com/site/duoduochafang/_/rsrc/1467895460840/chan-pin-jie-shao/he-fei-liao/%E9%A3%BD%E8%B6%B3%E6%84%9F.jpg',
+            name: '核廢料',
+            price: 30,
+            content: '綠豆沙+奶粉+阿華田+仙草凍+珍珠'
+        }        
+        
+        var drink_list = [Yakult, green, red, nuclear];
+
+        // //樣板字串 `內容`
+        // for (let i = 0; i < drink_list.length; i++) {            
+        //     card_group.innerHTML += `
+        //         <div class="card">
+        //             <div class="photo">
+        //                 <img src="${drink_list[i].img}" alt="">
+        //             </div>            
+        //             <div class="content">
+        //                 <p>品名:${drink_list[i].name}</p>
+        //                 <p>價錢:${drink_list[i].price}</p>
+        //                 <p>內容物:${drink_list[i].content}</p>
+        //             </div>
+        //         </div>  
+        //         `
+        // }
+
+        drink_list.forEach(element => {            
+            card_group.innerHTML += `
+                <div class="card">
+                    <div class="photo">
+                        <img src="${element.img}" alt="">
+                    </div>            
+                    <div class="content">
+                        <p>品名:${element.name}</p>
+                        <p>價錢:${element.price}</p>
+                        <p>內容物:${element.content}</p>
+                    </div>
+                </div>  
+                `
+        });
+
+
+        // console.log(card_group);
+    </script>
+</body>
+
+</html>
