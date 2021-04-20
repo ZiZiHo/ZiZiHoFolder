@@ -779,6 +779,29 @@ input {
         width: 75%;
         height: 75%;
     }
+    .slide-picture-block{
+        flex-wrap: wrap;
+        background-color: rgb(230 , 230 , 230);
+    }
+    .slide-picture-text{
+        width: 100%;
+        position: static;
+        display: flex;
+        /* justify-content: space-between; */
+        background-color: rgb(230 , 230 , 230);
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 35px;
+        padding-top: 15px;
+    }
+    .commodity-name h1{
+        font-size: 20px;
+        margin: 0;
+    }
+    .commodity-description{
+        margin: 0;
+    }
+
 
     /*--------------------------------------------------------- 手機板 pop--------------------------------------------------------- */
     /* .mobile-bar-pop {
