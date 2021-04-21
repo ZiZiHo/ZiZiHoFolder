@@ -57,6 +57,9 @@
         var GamePanel = document.querySelector('.game-panel');
 
         var iLevel = 1;
+        start_box.onclick = function(){
+            newGame()    
+        }
         newGame()
 
         function newGame() {
@@ -92,7 +95,6 @@
                     iLevel = 1;
                 }
                 newGame()
-                console.log(iLevel);
             }
 
         }
