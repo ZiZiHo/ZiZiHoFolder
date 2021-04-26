@@ -49,6 +49,10 @@ main .card-group .card .card-body .card-link svg {
   height: 16px;
 }
 
+main .text-2 .container .dash {
+  position: relative;
+}
+
 footer {
   width: 100%;
 }
@@ -64,10 +68,5 @@ footer .container .foorter-block .block-left .logo .img {
 
 footer .container .foorter-block .block-left .logo-text {
   height: 88px;
-}
-
-footer .text-2 .container .dash::after {
-  width: 50px;
-  height: 2px;
 }
 /*# sourceMappingURL=style.css.map */
