@@ -65,4 +65,9 @@ footer .container .foorter-block .block-left .logo .img {
 footer .container .foorter-block .block-left .logo-text {
   height: 88px;
 }
+
+footer .text-2 .container .dash::after {
+  width: 50px;
+  height: 2px;
+}
 /*# sourceMappingURL=style.css.map */
