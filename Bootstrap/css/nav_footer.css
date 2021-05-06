@@ -1,0 +1,22 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body nav {
+  height: 92px;
+  max-width: 1280px;
+}
+
+body nav a {
+  height: 100%;
+}
+
+body nav a .nav-logo {
+  height: 100%;
+}
+/*# sourceMappingURL=nav_footer.css.map */
