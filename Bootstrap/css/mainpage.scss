@@ -33,4 +33,25 @@ main{
             }
         }
     }
+    .img-bar{        
+        .img-bar-round{
+                height: 80px;
+                width: 80px;
+                background-color: rgb(224,231,255);
+                @media (min-width: 640px){
+                    height: 128px;
+                    width: 128px;
+                }
+            svg{
+                height: 40px;
+                width: 40px;
+
+                @media (min-width: 640px){
+                    height: 64px;
+                    width: 64px;
+                }
+            }
+        }
+        
+    }
 }

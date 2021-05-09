@@ -20,4 +20,29 @@ main .card-group .card .card-body .card-link svg {
   width: 16px;
   height: 16px;
 }
+
+main .img-bar .img-bar-round {
+  height: 80px;
+  width: 80px;
+  background-color: #e0e7ff;
+}
+
+@media (min-width: 640px) {
+  main .img-bar .img-bar-round {
+    height: 128px;
+    width: 128px;
+  }
+}
+
+main .img-bar .img-bar-round svg {
+  height: 40px;
+  width: 40px;
+}
+
+@media (min-width: 640px) {
+  main .img-bar .img-bar-round svg {
+    height: 64px;
+    width: 64px;
+  }
+}
 /*# sourceMappingURL=mainpage.css.map */
