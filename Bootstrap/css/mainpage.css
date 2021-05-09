@@ -1,3 +1,11 @@
+main .w-4 {
+  width: 1rem;
+}
+
+main .h-4 {
+  height: 1rem;
+}
+
 main .card-group p {
   font-size: 1rem;
 }
@@ -27,7 +35,7 @@ main .img-bar .img-bar-round {
   background-color: #e0e7ff;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   main .img-bar .img-bar-round {
     height: 128px;
     width: 128px;
@@ -37,9 +45,10 @@ main .img-bar .img-bar-round {
 main .img-bar .img-bar-round svg {
   height: 40px;
   width: 40px;
+  color: #6366f1;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   main .img-bar .img-bar-round svg {
     height: 64px;
     width: 64px;
