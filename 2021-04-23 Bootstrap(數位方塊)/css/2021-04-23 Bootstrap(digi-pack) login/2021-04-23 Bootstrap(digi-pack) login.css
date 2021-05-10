@@ -1,0 +1,132 @@
+.login-bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://dummyimage.com/1920x1080");
+  background-size: cover;
+  position: relative;
+}
+
+.login-bg .left {
+  height: 100%;
+  opacity: 0.6;
+  background-color: black;
+  padding: 0px 90px;
+  display: none;
+}
+
+.login-bg .left h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.login-bg .left h2 {
+  font-size: 30px;
+}
+
+.login-bg .left .row {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.login-bg .left .row .left-link {
+  height: 40px;
+}
+
+.login-bg .right {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0px 3%;
+}
+
+.login-bg .right .title svg {
+  color: #fff;
+  height: 64px;
+}
+
+.login-bg .right .links {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+}
+
+.login-bg .right .links span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login-bg .right input {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  background-color: black;
+  border-style: unset;
+  color: #fff;
+}
+
+.login-bg .right input::-webkit-input-placeholder {
+  color: #969eaa;
+}
+
+.login-bg .right input:-ms-input-placeholder {
+  color: #969eaa;
+}
+
+.login-bg .right input::-ms-input-placeholder {
+  color: #969eaa;
+}
+
+.login-bg .right input::placeholder {
+  color: #969eaa;
+}
+
+.login-bg .right .f-y-p {
+  color: #969eaa;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.login-bg .right .f-y-p:hover {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-bg .right button {
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #6366f1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: unset;
+}
+
+.login-bg .right button:hover {
+  background-color: #4f46e5;
+}
+
+@media (min-width: 768px) {
+  .login-bg .right input {
+    width: 60%;
+  }
+  .login-bg .right button {
+    width: 55%;
+  }
+}
+
+@media (min-width: 992px) {
+  .login-bg .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .login-bg .right {
+    background-color: #162446;
+    opacity: 1;
+  }
+  .login-bg .right .right-link {
+    display: none;
+  }
+}
+/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) login.css.map */

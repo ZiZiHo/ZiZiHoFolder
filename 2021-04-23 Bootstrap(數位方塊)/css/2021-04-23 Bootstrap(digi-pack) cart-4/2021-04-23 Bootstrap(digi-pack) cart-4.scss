@@ -1,0 +1,219 @@
+.navbar-light {
+    .navbar-brand {
+        max-width: 200px;
+        min-width: 150px;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .btn {
+                width: 100%;
+                color: #fff;
+                background-color: #f8f9fa;
+                border-color: #f8f9fa;
+                border-radius: 10px;
+            }
+            .btn:hover {
+                background-color: #e4e7eb;
+            }
+
+            i,
+            a {
+                font-size: 14px;
+                font-weight: 600;
+                color: #374151;
+            }
+
+            i {
+                margin-top: 6px;
+                font-size: 25px;
+            }
+
+            .btn-secondary:hover {
+                background-color: #a9a9a9;
+            }
+            .dropdown {
+                .dropdown-menu.show {
+                    min-width: 180px;
+                    left: -150px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: #d1d5db;
+    padding: 50px 0px;
+    .cart-page {
+        max-width: 1024px;
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        padding: 40px;
+
+        .prog-bar {
+            height: 70px;
+        }
+
+        .title-1 {
+            height: 40px;
+        }
+
+        .title-2 {
+            height: 50px;
+        }
+
+        .green-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            font-size: 20px;
+            .row {
+                height: unset;
+            }
+        }
+        .green-circle:first-child {
+            background-color: #10b981;
+        }
+        .progress {
+            width: 13%;
+            height: 10px;
+            border-radius: 12px;
+            .progress-bar {
+                background-color: #6ee7b7;
+                border-radius: 12px;
+            }
+        }
+
+        .product {
+            height: 80px;
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input{
+            width: 30px;
+            height: 30px;
+        }
+
+        h3{
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .email{
+            margin-right: 40px;
+        }
+
+    }
+}
+
+footer {
+    #fat-footer {
+        width: 100%;
+
+        .fat-f-left {
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .fat-f-text {
+            width: 250px;
+        }
+    }
+    .bottom-footer {
+        background-color: #f3f4f6;
+    }
+    .bg-b-footer {
+        background-color: #f3f4f6;
+        .col-3 {
+            svg {
+                width: 20px;
+                color: #6b7280;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    nav {
+        .container {
+            max-width: 1280px;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+
+    main {
+        .cart-page {
+            .progress {
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+
+        .navbar-expand-lg {
+            .navbar-collapse {
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -ms-flex-preferred-size: auto;
+                flex-basis: auto;
+
+                .navbar-nav {
+                    flex-direction: row;
+                }
+            }
+
+            .navbar-toggler {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    main {
+        .cart-page {
+            .progress {
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}

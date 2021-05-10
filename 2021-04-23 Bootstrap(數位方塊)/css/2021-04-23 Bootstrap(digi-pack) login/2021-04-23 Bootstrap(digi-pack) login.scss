@@ -1,0 +1,113 @@
+.login-bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://dummyimage.com/1920x1080");
+    background-size: cover;
+    position: relative;
+
+    .left {
+        height: 100%;
+        opacity: 0.6;
+        background-color: black;
+        padding: 0px 90px;
+        display: none;
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        .row {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            .left-link {
+                height: 40px;
+            }
+        }
+    }
+
+    .right {
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        padding: 0px 3%;
+
+        .title {
+            svg {
+                color: #fff;
+                height: 64px;
+            }
+        }
+        .links {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #fff;
+
+            span {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        input {
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+            background-color: black;
+            border-style: unset;
+            color: #fff;
+        }
+        input::placeholder {
+            color: #969eaa;
+        }
+        .f-y-p {
+            color: #969eaa;
+            transition: 0.8s;
+        }
+        .f-y-p:hover {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            height: 60px;
+            border-radius: 30px;
+            background-color: #6366f1;
+            transition: 0.5s;
+            border: unset;
+        }
+        button:hover {
+            background-color: rgb(79, 70, 229);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .login-bg {
+        .right {
+            input {
+                width: 60%;
+            }
+            button {
+                width: 55%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .login-bg {
+        .left {
+            display: flex;
+        }
+        .right {
+            background-color: #162446;
+            opacity: 1;
+            .right-link {
+                display: none;
+            }
+        }
+    }
+}
