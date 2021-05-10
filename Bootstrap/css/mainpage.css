@@ -6,6 +6,22 @@ main .h-4 {
   height: 1rem;
 }
 
+main .w-5 {
+  width: 1.25rem;
+}
+
+main .h-5 {
+  height: 1.25rem;
+}
+
+main .w-6 {
+  width: 1.5rem;
+}
+
+main .h-6 {
+  height: 1.5rem;
+}
+
 main .card-group p {
   font-size: 1rem;
 }
