@@ -1,0 +1,22 @@
+main .w-10 {
+  width: 2.5rem;
+}
+
+main .h-10 {
+  height: 2.5rem;
+}
+
+main .max-w-md {
+  max-width: 30rem;
+}
+
+main .relative {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  main .max-md-w-5 {
+    max-width: 64rem;
+  }
+}
+/*# sourceMappingURL=shopping-car.css.map */

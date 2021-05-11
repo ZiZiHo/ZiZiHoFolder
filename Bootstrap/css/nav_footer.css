@@ -17,11 +17,8 @@ body {
   margin: 0;
 }
 
-body nav {
-  height: 92px;
+body nav .max-w-1280 {
   max-width: 1280px;
-  position: relative;
-  z-index: 2;
 }
 
 body nav a {

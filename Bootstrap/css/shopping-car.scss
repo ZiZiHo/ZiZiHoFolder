@@ -1,0 +1,19 @@
+main{
+    .w-10{
+        width: 2.5rem;
+    }
+    .h-10 {
+        height: 2.5rem;
+    }
+    .max-w-md {
+        max-width: 30rem;
+    }
+    .relative{
+        position: relative;
+    }
+    .max-md-w-5{
+        @media (min-width: 992px) {
+            max-width: 64rem;
+        }
+    }
+}

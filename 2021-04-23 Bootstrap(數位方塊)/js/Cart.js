@@ -29,7 +29,7 @@ for (let i = 0 ; i < iLength ; i++)
 {
     plusButton[i].onclick = function ()
     {
-        iInputNumber[i].value++;
+        iInputNumber[i].value += iX;
         iProductTotalPrice[i].innerHTML = '$' + iProductPrice[i].toFixed(2);
         iCarQty.innerHTML++;
         subTotalNumber += iProductPrice[i];
