@@ -1,9 +1,22 @@
+main .w-8 {
+  width: 2rem;
+}
+
 main .w-10 {
   width: 2.5rem;
 }
 
 main .h-10 {
   height: 2.5rem;
+}
+
+main .h-12 {
+  height: 3rem;
+}
+
+main .px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 main .max-w-md {
@@ -18,5 +31,11 @@ main .relative {
   main .max-md-w-5 {
     max-width: 64rem;
   }
+}
+
+main input[type=number]::-webkit-outer-spin-button,
+main input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=shopping-car.css.map */

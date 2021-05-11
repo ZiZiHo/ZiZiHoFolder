@@ -28,4 +28,12 @@ body nav a {
 body nav a .nav-logo {
   height: 100%;
 }
+
+body footer .w-5 {
+  width: 1.25rem;
+}
+
+body footer .h-5 {
+  height: 1.25rem;
+}
 /*# sourceMappingURL=nav_footer.css.map */

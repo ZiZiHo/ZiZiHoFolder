@@ -1,9 +1,19 @@
 main{
+    .w-8 {
+        width: 2rem;
+    }
     .w-10{
         width: 2.5rem;
     }
     .h-10 {
         height: 2.5rem;
+    }
+    .h-12 {
+        height: 3rem;
+    }
+    .px-12 {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     .max-w-md {
         max-width: 30rem;
@@ -15,5 +25,10 @@ main{
         @media (min-width: 992px) {
             max-width: 64rem;
         }
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
