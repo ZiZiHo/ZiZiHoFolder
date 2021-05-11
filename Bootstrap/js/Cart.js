@@ -5,8 +5,7 @@ var iProductTotalPrice = document.querySelectorAll('.price');
 var iCarQty = document.querySelector('.car-qty');
 var subTotal = document.querySelector('.subtotal')
 var total = document.querySelector('.totalPay')
-
-
+// 初值設定
 var iProductPrice = [];
 var subTotalNumber = 0;
 var totalNumber = 0;
