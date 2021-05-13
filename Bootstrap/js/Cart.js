@@ -27,7 +27,7 @@ for (let i = 0; i < iLength; i++) {
 // 處理單純加號減號
 for (let i = 0; i < iLength; i++) {
     plusButton[i].onclick = function () {
-        UpdateProduct(i, 1);
+        UpdateProduct(i);
     }
 
     minusButton[i].onclick = function () {
@@ -45,7 +45,7 @@ for (let i = 0; i < iLength; i++) {
 // 函式區
 // 目的 : 處理各產品因為加減號影響的價格以及總價
 // 輸入 : 第幾個產品 以及 opcode 決定+-
-function UpdateProduct(index, opcode) {
+function UpdateProduct(index, opcode=1) {
     var temp = parseInt(iInputNumber[index].value) + opcode;
     iInputNumber[index].value = temp;
     iProductTotalPrice[index].innerHTML = '$' + (iProductPrice[index] * iInputNumber[index].value).toFixed(2);
