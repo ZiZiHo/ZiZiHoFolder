@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEQ,MAAM,EAAE,SAAS,EAAE,KAAK;EAFhC,AACI,IADA,CACA,QAAQ,CAAA;IAEA,KAAK,EAAE,GAAG;GAEjB",
     "sources": [
         "loginpage.scss"
     ],

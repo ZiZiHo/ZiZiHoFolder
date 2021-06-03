@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=loginpage.css.map */
+@media (min-width: 992px) {
+  body .w-lg-50 {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=loginpage.css.map */

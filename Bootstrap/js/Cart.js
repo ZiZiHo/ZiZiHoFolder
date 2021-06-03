@@ -78,3 +78,4 @@ function UpdateTotalPay() {
     totalNumber = subTotalNumber + shipping;
     total.innerHTML = '$' + totalNumber.toFixed(2);
 }
+
