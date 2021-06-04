@@ -44,6 +44,10 @@ main .h-64 {
   }
 }
 
+main .container {
+  max-width: 100%;
+}
+
 main .absolute {
   position: absolute;
 }
